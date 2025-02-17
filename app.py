@@ -13,6 +13,7 @@ login_manager = LoginManager()
 login_manager.login_view = 'login'
 login_manager.init_app(app)
 
+# Model สำหรับ User
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
@@ -26,6 +27,7 @@ def load_user(user_id):
 def home():
     return render_template('index.html')
 
+# สมัครสมาชิก
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -42,7 +44,7 @@ def register():
             return redirect(url_for('register'))
 
         try:
-            hashed_password = generate_password_hash(register.password.data).decode('utf-8')
+            hashed_password = generate_password_hash(password, method='pbkdf2:sha256')  # ✅ แก้ไขตรงนี้
             new_user = User(username=username, password=hashed_password)
             db.session.add(new_user)
             db.session.commit()
@@ -54,6 +56,7 @@ def register():
 
     return render_template('register.html')
 
+# ล็อกอิน
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -70,11 +73,13 @@ def login():
 
     return render_template('login.html')
 
+# หน้าแดชบอร์ด (ต้องล็อกอินก่อน)
 @app.route('/dashboard')
 @login_required
 def dashboard():
     return render_template('dashboard.html', user=current_user)
 
+# ล็อกเอาต์
 @app.route('/logout')
 @login_required
 def logout():
@@ -85,5 +90,5 @@ def logout():
 if __name__ == '__main__':
     print("Starting Flask server...")
     with app.app_context():
-        db.create_all()
+        db.create_all()  # ✅ สร้างฐานข้อมูลหากยังไม่มี
     app.run(debug=True)
