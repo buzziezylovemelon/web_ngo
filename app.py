@@ -37,12 +37,12 @@ def register():
 
         if not username or not password:
             flash('Please fill in all fields', 'danger')
-            return redirect(url_for('register'))
+            return render_template('register.html')  # เปิดหน้า register.html ทันที
 
         existing_user = User.query.filter_by(username=username).first()
         if existing_user:
             flash('Username already exists!', 'danger')
-            return redirect(url_for('register'))
+            return render_template('register.html')  # เปิดหน้า register.html ทันที
 
         try:
             hashed_password = generate_password_hash(password, method='sha256')
@@ -50,7 +50,7 @@ def register():
             db.session.add(new_user)
             db.session.commit()
             flash('Account created successfully! Please login.', 'success')
-            return redirect(url_for('login'))
+            return render_template('login.html')  # เปิดหน้า login.html ทันที
         except Exception as e:
             db.session.rollback()
             flash(f'Database error: {str(e)}', 'danger')
@@ -68,7 +68,7 @@ def login():
         if user and check_password_hash(user.password, password):
             login_user(user)
             flash('Login successful!', 'success')
-            return redirect(url_for('dashboard'))
+            return render_template('dashboard.html', user=current_user)  # เปิดหน้า dashboard.html ทันที
         
         flash('Invalid username or password!', 'danger')
 
@@ -86,7 +86,7 @@ def dashboard():
 def logout():
     logout_user()
     flash('You have been logged out.', 'info')
-    return redirect(url_for('home'))
+    return render_template('login.html')  # กลับไปหน้า login.html ทันที
 
 if __name__ == '__main__':
     print("Starting Flask server...")
