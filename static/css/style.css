@@ -110,41 +110,40 @@ h2 {
 
 
 .champ {
-    position: relative;
     text-align: center;
-    /* margin-top: 20px; */
+    position: relative;
 }
 
 .champ-img {
-    width: 100%;  /* ปรับขนาดรูป */
-    max-width: 6000px;
+    width: 100%;
     height: auto;
-    border-radius: 10px; /* เพิ่มขอบโค้งมน */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
 }
 
 .text-overlay {
     position: absolute;
-    top: 50%;   /* กึ่งกลางแนวตั้ง */
-    left: 50%;  /* กึ่งกลางแนวนอน */
-    transform: translate(-50%, -50%);  /* ปรับให้ text อยู่ตรงกลางรูป */
-    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 15px 20px;
-    
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 5px;
 }
+
 .red-bar {
-    width: 100%; /* ให้แถบยาวสุดขอบ */
-    height: 60px; /* ความสูงของแถบ */
-    background-color: #b71c1c; /* สีแดง */
-    display: flex;
+    width: 100%;
+    height: 60px; /* ปรับขนาดแถบ */
+    background-color: #b71c1c;
 }
 
 .thopyyy {
-    color: white;
-    font-size: 16px; /* ปรับขนาดให้เล็กลง */
-    font-weight: bold;
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 100%; /* ให้สุดขอบ */
+    text-align: center;
+}
+
+.thopyyy-img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
