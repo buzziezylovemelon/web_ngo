@@ -19,6 +19,8 @@ body {
 .nav-left {
     display: flex;
     align-items: center;
+    text-decoration: none; /* เอาขีดเส้นใต้ออกจากลิงก์ทั้งหมดใน nav-left */
+    color: white;
 }
 
 .logo {
@@ -30,6 +32,8 @@ body {
     font-size: 20px;
     font-weight: bold;
     color: white;
+    text-decoration: none; /* เอาขีดเส้นใต้ออก */
+    color: inherit; /* ให้ใช้สีตามปกติของข้อความ */
 }
 
 .nav-right a {

@@ -27,6 +27,10 @@ def load_user(user_id):
 def home():
     return render_template('index.html')
 
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
 # สมัครสมาชิก
 @app.route('/register', methods=['GET', 'POST'])
 def register():
@@ -44,7 +48,7 @@ def register():
             return redirect(url_for('register'))
 
         try:
-            hashed_password = generate_password_hash(password, method='pbkdf2:sha256')  # ✅ แก้ไขตรงนี้
+            hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
             new_user = User(username=username, password=hashed_password)
             db.session.add(new_user)
             db.session.commit()
@@ -90,5 +94,5 @@ def logout():
 if __name__ == '__main__':
     print("Starting Flask server...")
     with app.app_context():
-        db.create_all()  # ✅ สร้างฐานข้อมูลหากยังไม่มี
+        db.create_all()
     app.run(debug=True)

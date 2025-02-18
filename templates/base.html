@@ -10,8 +10,10 @@
 
     <nav class="navbar">
         <div class="nav-left">
-            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Liverpool FC Logo" class="logo">
-            <span class="club-name">Liverpool FC</span>
+            <a href="{{ url_for('base') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Liverpool FC Logo" class="logo">
+            </a>
+            <a href="{{ url_for('base') }}" class="club-name">Liverpool FC</a>
         </div>
         <div class="nav-right">
             <a href="#">Competition</a>
