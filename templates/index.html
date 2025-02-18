@@ -3,6 +3,10 @@
 {% block title %}Home - Liverpool FC{% endblock %}
 
 {% block content %}
-<h1>Welcome to Liverpool FC Fan Page!</h1>
-<p>This is a website dedicated to Liverpool FC fans.</p>
+<div class="champ">
+    <img src="{{ url_for('static', filename='images/eiei.png') }}" alt="Liverpool FC" class="champ-img">
+    <div class="text-overlay">Welcome to Liverpool FC Fan Page!</div>
+</div>
+<div class="red-bar"></div>
 {% endblock %}
+

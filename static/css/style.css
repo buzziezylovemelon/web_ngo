@@ -101,3 +101,42 @@ h2 {
 .btn-danger:hover {
     background-color: #c9302c;
 }
+
+.mainpage {
+    color: azure; /* ✅ สีข้อความเป็น azure */
+    padding: 50px;
+}
+
+
+
+.champ {
+    position: relative;
+    text-align: center;
+    /* margin-top: 20px; */
+}
+
+.champ-img {
+    width: 100%;  /* ปรับขนาดรูป */
+    max-width: 6000px;
+    height: auto;
+    border-radius: 10px; /* เพิ่มขอบโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;   /* กึ่งกลางแนวตั้ง */
+    left: 50%;  /* กึ่งกลางแนวนอน */
+    transform: translate(-50%, -50%);  /* ปรับให้ text อยู่ตรงกลางรูป */
+    
+    color: white;
+    padding: 15px 20px;
+    
+}
+.red-bar {
+    width: 100%; /* ให้แถบยาวสุดขอบ */
+    height: 60px; /* ความสูงของแถบ */
+    background-color: #b71c1c; /* สีแดง */
+    display: flex;
+}
+
