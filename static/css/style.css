@@ -62,47 +62,30 @@ body {
 /* Slider */
 .slider {
     position: relative;
-    width: 100%; /* ปรับให้เต็มหน้าจอ */
+    width: 100%;
     max-width: 800px;
-    margin: 0; /* จัดให้อยู่ซ้ายสุด */
+    margin: 0 auto;
     overflow: hidden;
 }
 
+/* โครงสร้างของ slides */
 .slides {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
+/* ซ่อนทุกสไลด์ก่อน */
 .memorable-item {
-    display: flex;
+    display: none;
+    flex-direction: row; /* ให้รูปและข้อความอยู่แนวนอน */
+    align-items: flex-start;
     justify-content: flex-start;
-    align-items: center;
-    gap: 20px;
     width: 100%;
-    margin: 10px 0; /* ปรับ margin ให้ชิดซ้าย */
-    padding: 20px;
-    display: none;
 }
 
-.memorable-img {
-    width: 40%;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.memorable-text {
-    width: 60%;
-    font-size: 18px;
-    text-align: left;
-}
-
-/* Radio Buttons */
-input[type="radio"] {
-    display: none;
-}
-
+/* แสดงเฉพาะสไลด์ที่ถูกเลือก */
 #slide1:checked ~ .slides .memorable-item:nth-child(1),
 #slide2:checked ~ .slides .memorable-item:nth-child(2),
 #slide3:checked ~ .slides .memorable-item:nth-child(3),
@@ -111,10 +94,37 @@ input[type="radio"] {
     display: flex;
 }
 
+/* ปรับขนาดรูปให้เหมาะสม */
+.memorable-img {
+    width: 40%;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* ปรับข้อความให้แสดงครบทุกตัวอักษร */
+.memorable-text {
+    white-space: normal; /* ให้ข้อความขึ้นบรรทัดใหม่ */
+    overflow: visible; /* ป้องกันการซ่อนข้อความ */
+    text-overflow: clip; /* ป้องกัน "..." เวลาข้อความเกิน */
+    max-height: unset; /* ยกเลิกข้อจำกัดความสูง */
+    display: block; /* ให้ข้อความแสดงครบ */
+    word-break: break-word; /* ตัดคำอัตโนมัติ */
+    flex-grow: 1; /* ให้ข้อความขยายพื้นที่ได้ */
+    line-height: 1.5; /* ปรับระยะห่างบรรทัดให้อ่านง่าย */
+    width: 100%; /* ให้กล่องข้อความเต็มพื้นที่ที่มี */
+    max-width: none; /* เอาข้อจำกัด max-width ออก */
+    text-align: left;
+}
+
+/* Radio Buttons */
+input[type="radio"] {
+    display: none;
+}
+
 /* Navigation Dots */
 .navigation {
     display: flex;
-    justify-content: flex-start; /* ปรับให้ navigation อยู่ซ้าย */
+    justify-content: flex-start;
     margin-top: 10px;
 }
 
@@ -127,7 +137,8 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-input[type="radio"]:checked + .navigation label {
+/* ทำให้ปุ่มที่ถูกเลือกเป็นสีแดง */
+input[type="radio"]:checked + label {
     background-color: #c8102e;
 }
 
