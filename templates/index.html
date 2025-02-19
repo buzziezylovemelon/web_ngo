@@ -5,58 +5,39 @@
 {% block content %}
 <div class="memorable-things">
     <h2>Memorable Things</h2>
-    <div class="memorable-item">
-        <img src="{{ url_for('static', filename='images/memorable1.png') }}" alt="Memorable Moment 1" class="memorable-img">
-        <div class="memorable-text">
-            <p>This is a description of a memorable moment for Liverpool FC.</p>
+    <div class="slider">
+        <input type="radio" name="slide" id="slide1" checked>
+        <input type="radio" name="slide" id="slide2">
+        <input type="radio" name="slide" id="slide3">
+
+        <div class="slides">
+            <div class="memorable-item">
+                <img src="{{ url_for('static', filename='images/memorable1.png') }}" alt="Memorable Moment 1" class="memorable-img">
+                <div class="memorable-text">
+                    <p>This is a description of a memorable moment for Liverpool FC.</p>
+                </div>
+            </div>
+            <div class="memorable-item">
+                <img src="{{ url_for('static', filename='images/memorable2.png') }}" alt="Memorable Moment 2" class="memorable-img">
+                <div class="memorable-text">
+                    <p>This is another description of a memorable moment for Liverpool FC.</p>
+                </div>
+            </div>
+            <div class="memorable-item">
+                <img src="{{ url_for('static', filename='images/memorable3.png') }}" alt="Memorable Moment 3" class="memorable-img">
+                <div class="memorable-text">
+                    <p>This is yet another description of a memorable moment for Liverpool FC.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <label for="slide1"></label>
+            <label for="slide2"></label>
+            <label for="slide3"></label>
         </div>
     </div>
-    <div class="memorable-item">
-        <img src="{{ url_for('static', filename='images/memorable2.png') }}" alt="Memorable Moment 2" class="memorable-img">
-        <div class="memorable-text">
-            <p>This is another description of a memorable moment for Liverpool FC.</p>
-        </div>
-    </div>
-    <div class="memorable-item">
-        <img src="{{ url_for('static', filename='images/memorable3.png') }}" alt="Memorable Moment 3" class="memorable-img">
-        <div class="memorable-text">
-            <p>This is yet another description of a memorable moment for Liverpool FC.</p>
-        </div>
-    </div>
-    <div class="slider-controls">
-        <button class="prev-slide">Previous</button>
-        <button class="next-slide">Next</button>
-    </div>
-</div></div>
-<!-- <div class="champ">
-    <img src="{{ url_for('static', filename='images/eiei.png') }}" alt="Liverpool FC" class="champ-img">
-    <div class="text-overlay">Welcome to Liverpool FC Fan Page!</div>
-</div> -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let currentIndex = 0;
-    const items = document.querySelectorAll('.memorable-item');
-    const totalItems = items.length;
-
-    function showItem(index) {
-        items.forEach((item, i) => {
-            item.style.display = i === index ? 'block' : 'none';
-        });
-    }
-
-    document.querySelector('.prev-slide').addEventListener('click', function() {
-        currentIndex = (currentIndex === 0) ? totalItems - 1 : currentIndex - 1;
-        showItem(currentIndex);
-    });
-
-    document.querySelector('.next-slide').addEventListener('click', function() {
-        currentIndex = (currentIndex === totalItems - 1) ? 0 : currentIndex + 1;
-        showItem(currentIndex);
-    });
-
-    showItem(currentIndex);
-});
-</script>
+</div>
 
 <div class="thopyyy">
     <img src="{{ url_for('static', filename='images/thropy.png') }}" alt="Liverpool FC" class="thopyyy-img">
