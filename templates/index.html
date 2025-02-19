@@ -9,6 +9,8 @@
         <input type="radio" name="slide" id="slide1" checked>
         <input type="radio" name="slide" id="slide2">
         <input type="radio" name="slide" id="slide3">
+        <input type="radio" name="slide" id="slide4">
+        <input type="radio" name="slide" id="slide5">
 
         <div class="slides">
             <div class="memorable-item">
@@ -29,18 +31,31 @@
                     <p>This is yet another description of a memorable moment for Liverpool FC.</p>
                 </div>
             </div>
+            <div class="memorable-item">
+                <img src="{{ url_for('static', filename='images/memorable1.png') }}" alt="Memorable Moment 4" class="memorable-img">
+                <div class="memorable-text">
+                    <p>หลังจากการรอคอยอันยาวนานถึง 30 ปี ลิเวอร์พูลสามารถคว้าแชมป์พรีเมียร์ลีกฤดูกาล 2019/20 ได้สำเร็จ...</p>
+                </div>
+            </div>
+            <div class="memorable-item">
+                <img src="{{ url_for('static', filename='images/memorable1.png') }}" alt="Memorable Moment 5" class="memorable-img">
+                <div class="memorable-text">
+                    <p>หลังจากการรอคอยอันยาวนานถึง 30 ปี ลิเวอร์พูลสามารถคว้าแชมป์พรีเมียร์ลีกฤดูกาล 2019/20 ได้สำเร็จ...</p>
+                </div>
+            </div>
         </div>
 
         <div class="navigation">
             <label for="slide1"></label>
             <label for="slide2"></label>
             <label for="slide3"></label>
+            <label for="slide4"></label>
+            <label for="slide5"></label>
         </div>
     </div>
 
     <!-- รูปที่ต้องการให้อยู่ล่างติดขอบ -->
     <img src="{{ url_for('static', filename='images/last.png') }}" alt="Last Image" class="last-img">
 </div>
-
 
 {% endblock %}

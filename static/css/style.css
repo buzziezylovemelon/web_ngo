@@ -150,7 +150,9 @@ input[type="radio"] {
 
 #slide1:checked ~ .slides .memorable-item:nth-child(1),
 #slide2:checked ~ .slides .memorable-item:nth-child(2),
-#slide3:checked ~ .slides .memorable-item:nth-child(3) {
+#slide3:checked ~ .slides .memorable-item:nth-child(3),
+#slide4:checked ~ .slides .memorable-item:nth-child(4),
+#slide5:checked ~ .slides .memorable-item:nth-child(5) {
     display: flex; /* แสดงเฉพาะอันที่เลือก */
 }
 
@@ -223,9 +225,4 @@ input[type="radio"]:checked + .navigation label {
     bottom: 0;
     left: 0;
     z-index: -1; /* ทำให้รูปอยู่ด้านหลังเนื้อหา */
-}
-
-.liv {
-    width: auto;  /* หรือขนาดที่ต้องการ */
-    height: auto; /* ปรับตามสัดส่วน */
 }
