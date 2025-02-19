@@ -224,3 +224,8 @@ input[type="radio"]:checked + .navigation label {
     left: 0;
     z-index: -1; /* ทำให้รูปอยู่ด้านหลังเนื้อหา */
 }
+
+.liv {
+    width: auto;  /* หรือขนาดที่ต้องการ */
+    height: auto; /* ปรับตามสัดส่วน */
+}
