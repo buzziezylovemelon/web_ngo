@@ -49,54 +49,6 @@ body {
     text-decoration: none;
 }
 
-/* Form Styling */
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.btn {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-danger {
-    background-color: #d9534f;
-    color: white;
-    border: none;
-}
-
-.btn-danger:hover {
-    background-color: #c9302c;
-}
-
 /* Section Memorable Things */
 .memorable-things {
     padding: 20px;
@@ -110,30 +62,33 @@ h2 {
 /* Slider */
 .slider {
     position: relative;
-    width: 80%;
+    width: 100%; /* ปรับให้เต็มหน้าจอ */
     max-width: 800px;
-    margin: auto;
+    margin: 0; /* จัดให้อยู่ซ้ายสุด */
     overflow: hidden;
 }
 
-/* จัดเรียงรูปให้อยู่ซ้าย ข้อความอยู่ขวา */
+.slides {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
 .memorable-item {
     display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 20px; /* ระยะห่างระหว่างรูปและข้อความ */
+    gap: 20px;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
+    margin: 10px 0; /* ปรับ margin ให้ชิดซ้าย */
     padding: 20px;
-    border-radius: 10px;
-    display: none; /* ซ่อนทุกอันก่อน */
+    display: none;
 }
 
 .memorable-img {
-    width: 40%; /* ปรับขนาดของรูป */
+    width: 40%;
     height: auto;
-    border-radius: 10px;
     flex-shrink: 0;
 }
 
@@ -153,13 +108,13 @@ input[type="radio"] {
 #slide3:checked ~ .slides .memorable-item:nth-child(3),
 #slide4:checked ~ .slides .memorable-item:nth-child(4),
 #slide5:checked ~ .slides .memorable-item:nth-child(5) {
-    display: flex; /* แสดงเฉพาะอันที่เลือก */
+    display: flex;
 }
 
 /* Navigation Dots */
 .navigation {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* ปรับให้ navigation อยู่ซ้าย */
     margin-top: 10px;
 }
 
@@ -176,47 +131,6 @@ input[type="radio"]:checked + .navigation label {
     background-color: #c8102e;
 }
 
-/* Section Trophy */
-.thopyyy {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.thopyyy-img {
-    width: 200px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Main Page */
-.mainpage {
-    color: azure;
-    padding: 50px;
-}
-
-/* Champ Section */
-.champ {
-    text-align: center;
-    position: relative;
-}
-
-.champ-img {
-    width: 100%;
-    height: auto;
-}
-
-.text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 10px 20px;
-    font-size: 24px;
-    border-radius: 5px;
-}
-
 /* รูป last.png ติดขอบล่างสุด */
 .last-img {
     width: 100%;
@@ -224,5 +138,5 @@ input[type="radio"]:checked + .navigation label {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: -1; /* ทำให้รูปอยู่ด้านหลังเนื้อหา */
+    z-index: -1;
 }
