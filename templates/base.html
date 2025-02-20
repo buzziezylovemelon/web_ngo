@@ -6,20 +6,18 @@
     <title>{% block title %}Liverpool FC{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/liv.png') }}">
-
-    
 </head>
 <body>
 
     <nav class="navbar">
         <div class="nav-left">
-            <a href="{{ url_for('base') }}">
+            <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Liverpool FC Logo" class="logo">
             </a>
-            <a href="{{ url_for('base') }}" class="club-name">Liverpool FC</a>
+            <a href="{{ url_for('home') }}" class="club-name">Liverpool FC</a>
         </div>
         <div class="nav-right">
-            <a href="#">Competition</a>
+            <a href="{{ url_for('home') }}">Memorable Things</a>
             <a href="#">Player</a>
             <a href="#">Trophy</a>
             <a href="{{ url_for('login') }}">Login</a>
@@ -27,9 +25,7 @@
         </div>
     </nav>
 
-    
-        {% block content %}{% endblock %}
-    
+    {% block content %}{% endblock %}
 
 </body>
 </html>

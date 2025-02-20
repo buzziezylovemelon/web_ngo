@@ -31,7 +31,6 @@ def home():
 def base():
     return render_template('base.html')
 
-# สมัครสมาชิก
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
@@ -60,7 +59,6 @@ def register():
 
     return render_template('register.html')
 
-# ล็อกอิน
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
@@ -77,13 +75,11 @@ def login():
 
     return render_template('login.html')
 
-# หน้าแดชบอร์ด (ต้องล็อกอินก่อน)
 @app.route('/dashboard')
 @login_required
 def dashboard():
     return render_template('dashboard.html', user=current_user)
 
-# ล็อกเอาต์
 @app.route('/logout')
 @login_required
 def logout():
@@ -92,7 +88,6 @@ def logout():
     return redirect(url_for('login'))
 
 if __name__ == '__main__':
-    print("Starting Flask server...")
     with app.app_context():
         db.create_all()
     app.run(debug=True)

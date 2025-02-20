@@ -64,7 +64,7 @@ body {
 .memorable-section {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* ระยะห่างระหว่างแต่ละบล็อก */
+    gap: 30px; /* ระยะห่างระหว่างแต่ละบล็อก */
     max-width: 1000px; /* จำกัดความกว้างของเนื้อหา */
     margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
