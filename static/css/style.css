@@ -57,23 +57,48 @@ body {
 .memorable-things h2 {
     color: #bebebe;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-/* รูป last.png ติดขอบล่างสุด */
-.last-img {
-    width: 100%;
-    height: auto;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
+/* จัด layout ให้เป็นคอลัมน์ */
+.memorable-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* ระยะห่างระหว่างแต่ละบล็อก */
+    max-width: 1000px; /* จำกัดความกว้างของเนื้อหา */
+    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
 }
 
-.memorable-left{
-    background-color: #E31C24;
+/* กำหนดสไตล์ให้บล็อกซ้าย-ขวา */
+.memorable-left, .memorable-right {
+    display: flex;
+    align-items: center;
     padding: 30px;
-    
+    border-radius: 10px;
+    overflow: hidden;
 }
 
+.memorable-left {
+    background-color: #E31C24; /* สีแดง */
+    color: white;
+}
 
+.memorable-right {
+    background-color: #e6e6e6; /* สีเทา */
+    color: black;
+}
 
+/* รูปภาพในแต่ละกล่อง */
+.memorable-left img, .memorable-right img {
+    width: 40%; /* ปรับขนาดรูปภาพ */
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+/* ข้อความ */
+.memorable-left p, .memorable-right p {
+    width: 60%;
+    font-size: 18px;
+    line-height: 1.6;
+}
