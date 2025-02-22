@@ -60,16 +60,14 @@ body {
     text-align: center;
 }
 
-/* จัด layout ให้เป็นคอลัมน์ */
 .memorable-section {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* ระยะห่างระหว่างแต่ละบล็อก */
-    max-width: 1000px; /* จำกัดความกว้างของเนื้อหา */
-    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* กำหนดสไตล์ให้บล็อกซ้าย-ขวา */
 .memorable-left, .memorable-right {
     display: flex;
     align-items: center;
@@ -79,26 +77,77 @@ body {
 }
 
 .memorable-left {
-    background-color: #E31C24; /* สีแดง */
+    background-color: #E31C24;
     color: white;
 }
 
 .memorable-right {
-    background-color: #e6e6e6; /* สีเทา */
+    background-color: #e6e6e6;
     color: black;
 }
 
-/* รูปภาพในแต่ละกล่อง */
 .memorable-left img, .memorable-right img {
-    width: 40%; /* ปรับขนาดรูปภาพ */
+    width: 40%;
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
 }
 
-/* ข้อความ */
 .memorable-left p, .memorable-right p {
     width: 60%;
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* Squad Section */
+.squad-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.squad-container h2 {
+    color: #E31C24;
+    margin-bottom: 30px;
+}
+
+.squad-section {
+    margin-bottom: 40px;
+}
+
+.squad-section h3 {
+    background-color: #E31C24;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.player-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 150px;
+}
+
+.player-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.player-card p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
 }
