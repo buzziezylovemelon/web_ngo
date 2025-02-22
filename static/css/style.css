@@ -139,6 +139,7 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 150px;
+    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างแถว */
 }
 
 .player-card img {
