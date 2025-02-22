@@ -1,5 +1,7 @@
+/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* Global Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -12,15 +14,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #E31C24; /* สีแดงลิเวอร์พูล */
+    background-color: #E31C24;
     padding: 10px 20px;
 }
 
 .nav-left {
     display: flex;
     align-items: center;
-    text-decoration: none;
-    color: white;
 }
 
 .logo {
@@ -28,44 +28,52 @@ body {
     margin-right: 10px;
 }
 
-.club-name {
-    font-size: 20px;
-    font-weight: bold;
+.club-name, .nav-right a {
     color: white;
     text-decoration: none;
-}
-
-.nav-right a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-right a:hover {
     color: #bebebe;
-    text-decoration: none;
 }
 
-/* Section Memorable Things */
+.memorable-section:hover {
+    outline: 2px solid black;
+}
+
+/* Memorable Things Section */
 .memorable-things {
     padding: 20px;
+    text-align: center;
 }
 
 .memorable-things h2 {
-    color: #bebebe;
-    margin-bottom: 20px;
-    text-align: center;
+    background-color: #E31C24;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.memorable-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .memorable-section {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .memorable-left, .memorable-right {
@@ -74,6 +82,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     overflow: hidden;
+    gap: 20px;
 }
 
 .memorable-left {
@@ -90,7 +99,6 @@ body {
     width: 40%;
     height: auto;
     border-radius: 10px;
-    margin-right: 20px;
 }
 
 .memorable-left p, .memorable-right p {
@@ -108,38 +116,37 @@ body {
 }
 
 .squad-container h2 {
-    color: #E31C24;
-    margin-bottom: 30px;
-}
-
-.squad-section {
-    margin-bottom: 40px;
-}
-
-.squad-section h3 {
     background-color: #E31C24;
     color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.squad-section h3 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
     display: inline-block;
 }
 
 .players-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 40px;
     justify-items: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .player-card {
     background-color: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 150px;
-    margin-bottom: 15px; /* เพิ่มระยะห่างระหว่างแถว */
+    width: 170px;
+    margin: 10px;
 }
 
 .player-card img {
@@ -151,4 +158,36 @@ body {
     margin-top: 10px;
     font-size: 16px;
     font-weight: bold;
+}
+
+.player-card:hover {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    border: 2px solid black;
+}
+
+/* Adjust Midfielders and Forwards Cards */
+.midfielders .player-card, .forwards .player-card {
+    margin: 10px;
+}
+/* Adjust spacing between player cards */
+.defenders .player-card {
+    margin: 20px;
+}
+.trophy-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8; /* ปรับสีพื้นหลังให้เหมือนภาพต้นฉบับ */
+    padding: 20px 0;
+}
+
+.trophy-container img {
+    width: 80%; /* ปรับขนาดรูปให้เหมาะสม */
+    height: auto;
+}
+.red-bar {
+    width: 100%;
+    height: 150px; /* ปรับความสูงของแถบแดง */
+    background-color: #E31C24; /* ใช้สีแดงเดียวกับของ Liverpool */
+    margin-top: 10px; /* เว้นระยะห่างจากถ้วยรางวัล */
 }
