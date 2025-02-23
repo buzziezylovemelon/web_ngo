@@ -3,7 +3,192 @@
 {% block title %}Dashboard - Liverpool FC{% endblock %}
 
 {% block content %}
-<div><center><h2>Welcome, {{ user.username }}!</h2>
-<p>This is your dashboard.</p>
-<a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a></center></div>
+<div class="welcome-image">
+    <img src="{{ url_for('static', filename='images/wall.png') }}" alt="Welcome To Anfield Stadium">
+</div>
+
+
+
+<div class="memorable-things" id="memorable-things">
+    <h2>Memorable Things</h2>
+</div>   
+
+<div class="memorable-container">
+    <div class="memorable-section" onclick="window.open('https://www.youtube.com/watch?v=UAixsyx70AM', '_blank')">
+        <div class="memorable-left">
+            <img src="{{ url_for('static', filename='images/memorable1.png') }}" alt="Image 1">
+            <p>
+                หลังจากการรอคอยอันยาวนานถึง 30 ปี ลิเวอร์พูลสามารถคว้าแชมป์พรีเมียร์ลีกฤดูกาล 2019/20 ได้สำเร็จอย่างยิ่งใหญ่! ภายใต้การคุมทีมของ เจอร์เก้น คล็อปป์ 'หงส์แดง' ทำผลงานได้อย่างโดดเด่น เก็บชัยชนะถึง 99 คะแนน ทิ้งห่างคู่แข่งแบบขาดลอย และการันตีแชมป์ได้ตั้งแต่ยังเหลือการแข่งขันอีก 7 นัด นี่คือช่วงเวลาแห่งประวัติศาสตร์ที่แฟนบอลเดอะค็อปทั่วโลกไม่มีวันลืม!
+            </p>
+        </div>
+    </div>
+
+    <div class="memorable-section" onclick="window.open('https://www.youtube.com/watch?v=3ojXHf293M8', '_blank')">
+        <div class="memorable-right">
+            <img src="{{ url_for('static', filename='images/memorable2.png') }}" alt="Image 2">
+            <p>
+                ลิเวอร์พูลสร้างหนึ่งในคัมแบ็กที่ยิ่งใหญ่ที่สุดในประวัติศาสตร์ฟุตบอล นัดชิงชนะเลิศยูฟ่า แชมเปียนส์ลีก 2004/05 พวกเขาตามหลัง เอซี มิลาน 0-3 ตั้งแต่ครึ่งแรก แต่ไม่ยอมแพ้!
+                ครึ่งหลัง 'หงส์แดง' ใช้เวลาเพียง 6 นาที ไล่ตีเสมอ 3-3 จาก สตีเวน เจอร์ราร์ด, วลาดิเมียร์ ซมิเซอร์ และ ซาบี อลอนโซ ก่อนที่ เจอร์ซี่ ดูเด็ค จะเซฟจุดโทษในช่วงดวลเป้า นำลิเวอร์พูลคว้าแชมป์ยุโรปสมัยที่ 5 ได้สำเร็จ
+                นี่คือค่ำคืนที่แฟนบอลเดอะค็อปจะไม่มีวันลืม!            </p>
+        </div>
+    </div>
+
+    <div class="memorable-section" onclick="window.open('https://www.youtube.com/watch?v=Ik-DhHJM8eo&t=515s', '_blank')">
+        <div class="memorable-left">
+            <img src="{{ url_for('static', filename='images/memorable3.png') }}" alt="Image 3">
+            <p>
+                ปาฏิหาริย์แอนฟิลด์!
+                ลิเวอร์พูลสร้างหนึ่งในคัมแบ็กที่ยิ่งใหญ่ที่สุดในประวัติศาสตร์ฟุตบอล เมื่อพวกเขาถล่ม บาร์เซโลนา 4-0 ที่แอนฟิลด์ แม้จะแพ้มาก่อน 0-3 ในเลกแรก ดิว็อค โอริกี้ ยิงนำเร็ว ก่อนที่ จอร์จินิโอ ไวจ์นัลดุม จะทำสองประตูรวด ตีเสมอสกอร์รวม 3-3 และช่วงเวลาสำคัญก็มาถึงเมื่อ เทรนต์ อเล็กซานเดอร์-อาร์โนลด์ เล่นเตะมุมสุดฉลาดให้ โอริกี้ ยิงประตูชัย 4-0 ลิเวอร์พูลพลิกสถานการณ์ผ่านเข้ารอบชิงฯ และคว้าแชมป์ยุโรปสมัยที่ 6 ได้ในที่สุด!            </p>
+        </div>
+    </div>
+
+    <div class="memorable-section" onclick="window.open('https://www.youtube.com/watch?v=zIlwMVkeJ5E&t=85s', '_blank')">
+        <div class="memorable-right">
+            <img src="{{ url_for('static', filename='images/memorable4.png') }}" alt="Image 4">
+            <p>
+                ลิเวอร์พูล แชมป์ยุโรปสมัยที่ 6!
+                หลังจากรอคอยมา 14 ปี ลิเวอร์พูลกลับมาผงาดบนเวทียูฟ่า แชมเปียนส์ลีก อีกครั้งในฤดูกาล 2018/19 โดยในรอบชิงชนะเลิศที่กรุงมาดริด พวกเขาเอาชนะ ท็อตแน่ม ฮ็อตสเปอร์ 2-0 คว้าแชมป์สมัยที่ 6 ไปครองได้อย่างยิ่งใหญ่
+                'หงส์แดง' ออกนำอย่างรวดเร็วตั้งแต่นาทีที่ 2 จากจุดโทษของ โมฮาเหม็ด ซาลาห์ ก่อนที่ ดิว็อค โอริกี้ จะซัดประตูปิดกล่องในช่วงท้ายเกม ส่งให้ลูกทีมของ เจอร์เก้น คล็อปป์ คว้าแชมป์ยุโรปได้สำเร็จ นี่คือค่ำคืนแห่งความยิ่งใหญ่ที่เดอะค็อปทั่วโลกไม่มีวันลืม!            </p>
+        </div>
+    </div>
+</div>
+
+<div class="squad-container">
+    <h2>Liverpool FC Squad</h2>
+    
+    <!-- Goalkeepers -->
+    <div class="squad-section">
+        <h3>Goalkeepers</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/alisson.png') }}" alt="Alisson Becker">
+                <p>1 Alisson Becker</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/kelleher.png') }}" alt="Caoimhin Kelleher">
+                <p>62 Caoimhin Kelleher</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/jaros.png') }}" alt="Vitezslav Jaros">
+                <p>56 Vitezslav Jaros</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/davies.png') }}" alt="Harvey Davies">
+                <p>95 Harvey Davies</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Defenders -->
+    <div class="squad-section">
+        <h3>Defenders</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/gomez.png') }}" alt="Joe Gomez">
+                <p>2 Joe Gomez</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/van_dijk.png') }}" alt="Virgil van Dijk">
+                <p>4 Virgil van Dijk</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/konate.png') }}" alt="Ibrahima Konate">
+                <p>5 Ibrahima Konate</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/tsimikas.png') }}" alt="Kostas Tsimikas">
+                <p>21 Kostas Tsimikas</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/robertson.png') }}" alt="Andy Robertson">
+                <p>26 Andy Robertson</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/alexander_arnold.png') }}" alt="Trent Alexander-Arnold">
+                <p>66 Trent Alexander-Arnold</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/quansah.png') }}" alt="Jarell Quansah">
+                <p>78 Jarell Quansah</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/bradley.png') }}" alt="Conor Bradley">
+                <p>84 Conor Bradley</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Midfielders -->
+    <div class="squad-section">
+        <h3>Midfielders</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/endo.png') }}" alt="Wataru Endo">
+                <p>3 Wataru Endo</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/szoboszlai.png') }}" alt="Dominik Szoboszlai">
+                <p>8 Dominik Szoboszlai</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/macallister.png') }}" alt="Alexis Mac Allister">
+                <p>10 Alexis Mac Allister</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/jones.png') }}" alt="Curtis Jones">
+                <p>17 Curtis Jones</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/elliott.png') }}" alt="Harvey Elliott">
+                <p>19 Harvey Elliott</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/gravenberch.png') }}" alt="Ryan Gravenberch">
+                <p>38 Ryan Gravenberch</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/morton.png') }}" alt="Tyler Morton">
+                <p>80 Tyler Morton</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forwards -->
+    <div class="squad-section">
+        <h3>Forwards</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/luis_diaz.png') }}" alt="Luis Diaz">
+                <p>7 Luis Diaz</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/nunez.png') }}" alt="Darwin Nunez">
+                <p>9 Darwin Nunez</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/salah.png') }}" alt="Mohamed Salah">
+                <p>11 Mohamed Salah</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/chiesa.png') }}" alt="Federico Chiesa">
+                <p>14 Federico Chiesa</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/gakpo.png') }}" alt="Cody Gakpo">
+                <p>18 Cody Gakpo</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/jota.png') }}" alt="Diogo Jota">
+                <p>20 Diogo Jota</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="trophy-container">
+    <img src="{{ url_for('static', filename='images/thropy.png') }}" alt="Trophy">
+</div>
+
+<div class="red-bar"></div>
+
 {% endblock %}

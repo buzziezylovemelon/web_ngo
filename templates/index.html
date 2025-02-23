@@ -3,7 +3,11 @@
 {% block title %}Home - Liverpool FC{% endblock %}
 
 {% block content %}
-<div class="memorable-things">
+<div class="welcome-image">
+    <img src="{{ url_for('static', filename='images/wall.png') }}" alt="Welcome To Anfield Stadium">
+</div>
+
+<div class="memorable-things" id="memorable-things">
     <h2>Memorable Things</h2>
 </div>   
 
@@ -48,100 +52,99 @@
 <div class="squad-container">
     <h2>Liverpool FC Squad</h2>
     
-        <!-- Goalkeepers -->
-        <div class="squad-section">
-            <h3>Goalkeepers</h3>
-            <div class="players-grid">
-                <div class="player-card">
-                    <img src="{{ url_for('static', filename='images/alisson.png') }}" alt="Alisson Becker">
-                    <p>1 Alisson Becker</p>
-                </div>
-                <div class="player-card">
-                    <img src="{{ url_for('static', filename='images/kelleher.png') }}" alt="Caoimhin Kelleher">
-                    <p>62 Caoimhin Kelleher</p>
-                </div>
-                <div class="player-card">
-                    <img src="{{ url_for('static', filename='images/jaros.png') }}" alt="Vitezslav Jaros">
-                    <p>56 Vitezslav Jaros</p>
-                </div>
-                <div class="player-card">
-                    <img src="{{ url_for('static', filename='images/davies.png') }}" alt="Harvey Davies">
-                    <p>95 Harvey Davies</p>
-                </div>
+    <!-- Goalkeepers -->
+    <div class="squad-section">
+        <h3>Goalkeepers</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/alisson.png') }}" alt="Alisson Becker">
+                <p>1 Alisson Becker</p>
             </div>
-        </div>
-    
-        <!-- Defenders -->
-        <div class="squad-section">
-            <h3>Defenders</h3>
-            <div class="players-grid">
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/gomez.png') }}" alt="Joe Gomez">
-                <p>#2 Joe Gomez</p>
-                </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/van_dijk.png') }}" alt="Virgil van Dijk">
-                <p>#4 Virgil van Dijk</p>
-                </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/konate.png') }}" alt="Ibrahima Konate">
-                <p>#5 Ibrahima Konate</p>
-                </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/tsimikas.png') }}" alt="Kostas Tsimikas">
-                <p>#21 Kostas Tsimikas</p>
-                </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/robertson.png') }}" alt="Andy Robertson">
-                <p>#26 Andy Robertson</p>
-                </div>
-                <div class="player-card">
-                    <img src="{{ url_for('static', filename='images/alexander_arnold.png') }}" alt="Trent Alexander-Arnold">
-                    <p>#66 Trent Alexander-Arnold</p>
-                    </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/quansah.png') }}" alt="Jarell Quansah">
-                <p>#78 Jarell Quansah</p>
-                </div>
-                <div class="player-card">
-                <img src="{{ url_for('static', filename='images/bradley.png') }}" alt="Conor Bradley">
-                <p>#84 Conor Bradley</p>
-                </div>
-                
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/kelleher.png') }}" alt="Caoimhin Kelleher">
+                <p>62 Caoimhin Kelleher</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/jaros.png') }}" alt="Vitezslav Jaros">
+                <p>56 Vitezslav Jaros</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/davies.png') }}" alt="Harvey Davies">
+                <p>95 Harvey Davies</p>
             </div>
         </div>
     </div>
+
+    <!-- Defenders -->
+    <div class="squad-section">
+        <h3>Defenders</h3>
+        <div class="players-grid">
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/gomez.png') }}" alt="Joe Gomez">
+                <p>2 Joe Gomez</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/van_dijk.png') }}" alt="Virgil van Dijk">
+                <p>4 Virgil van Dijk</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/konate.png') }}" alt="Ibrahima Konate">
+                <p>5 Ibrahima Konate</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/tsimikas.png') }}" alt="Kostas Tsimikas">
+                <p>21 Kostas Tsimikas</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/robertson.png') }}" alt="Andy Robertson">
+                <p>26 Andy Robertson</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/alexander_arnold.png') }}" alt="Trent Alexander-Arnold">
+                <p>66 Trent Alexander-Arnold</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/quansah.png') }}" alt="Jarell Quansah">
+                <p>78 Jarell Quansah</p>
+            </div>
+            <div class="player-card">
+                <img src="{{ url_for('static', filename='images/bradley.png') }}" alt="Conor Bradley">
+                <p>84 Conor Bradley</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Midfielders -->
     <div class="squad-section">
         <center><h3>Midfielders</h3></center>
         <div class="players-grid">
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/endo.png') }}" alt="Wataru Endo">
-                <p>#3 Wataru Endo</p>
+                <p>3 Wataru Endo</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/szoboszlai.png') }}" alt="Dominik Szoboszlai">
-                <p>#8 Dominik Szoboszlai</p>
+                <p>8 Dominik Szoboszlai</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/macallister.png') }}" alt="Alexis Mac Allister">
-                <p>#10 Alexis Mac Allister</p>
+                <p>10 Alexis Mac Allister</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/jones.png') }}" alt="Curtis Jones">
-                <p>#17 Curtis Jones</p>
+                <p>17 Curtis Jones</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/elliott.png') }}" alt="Harvey Elliott">
-                <p>#19 Harvey Elliott</p>
+                <p>19 Harvey Elliott</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/gravenberch.png') }}" alt="Ryan Gravenberch">
-                <p>#38 Ryan Gravenberch</p>
+                <p>38 Ryan Gravenberch</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/morton.png') }}" alt="Tyler Morton">
-                <p>#80 Tyler Morton</p>
+                <p>80 Tyler Morton</p>
             </div>
         </div>
     </div>
@@ -152,35 +155,44 @@
         <div class="players-grid">
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/luis_diaz.png') }}" alt="Luis Diaz">
-                <p>#7 Luis Diaz</p>
+                <p>7 Luis Diaz</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/nunez.png') }}" alt="Darwin Nunez">
-                <p>#9 Darwin Nunez</p>
+                <p>9 Darwin Nunez</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/salah.png') }}" alt="Mohamed Salah">
-                <p>#11 Mohamed Salah</p>
+                <p>11 Mohamed Salah</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/chiesa.png') }}" alt="Federico Chiesa">
-                <p>#14 Federico Chiesa</p>
+                <p>14 Federico Chiesa</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/gakpo.png') }}" alt="Cody Gakpo">
-                <p>#18 Cody Gakpo</p>
+                <p>18 Cody Gakpo</p>
             </div>
             <div class="player-card">
                 <img src="{{ url_for('static', filename='images/jota.png') }}" alt="Diogo Jota">
-                <p>#20 Diogo Jota</p>
+                <p>20 Diogo Jota</p>
             </div>
         </div>
     </div>
 </div>
 <div class="trophy-container">
-    <img src="{{ url_for('static', filename='images/thropy.png') }}" alt="thropy">
+    <img src="{{ url_for('static', filename='images/thropy.png') }}" alt="trophy">
+</div>
+
+
+<div class="nav-right">
+    {% if current_user.is_authenticated %}
+        <a href="{{ url_for('logout') }}">Logout</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+        <a href="{{ url_for('register') }}">Register</a>
+    {% endif %}
 </div>
 <div class="red-bar"></div>
-
 
 {% endblock %}

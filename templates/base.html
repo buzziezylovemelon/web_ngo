@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Liverpool FC{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/liv.png') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon-32x32.png') }}">
     <style>
         .nav-right a {
             margin-right: 15px; /* เพิ่มระยะห่างระหว่างลิงก์ */
@@ -13,7 +13,6 @@
     </style>
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-left">
             <a href="{{ url_for('home') }}">
@@ -22,15 +21,42 @@
             <a href="{{ url_for('home') }}" class="club-name">Liverpool FC</a>
         </div>
         <div class="nav-right">
-            <a href="{{ url_for('home') }}">Memorable Things</a>
-            <a href="#">Player</a>
-            <a href="#">Trophy</a>
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Register</a>
+            <a href="#" onclick="scrollToMemorable()">Memorable Things</a>
+            <a href="#" onclick="scrollToSquad()">Player</a>
+            <a href="#" onclick="scrollToTrophy()">Trophy</a>
+            {% if current_user.is_authenticated %}
+                <a href="{{ url_for('dashboard') }}">Dashboard</a>
+                <a href="{{ url_for('logout') }}">Log Out</a>
+            {% else %}
+                <a href="{{ url_for('login') }}">Login</a>
+                <a href="{{ url_for('register') }}">Register</a>
+            {% endif %}
         </div>
     </nav>
 
     {% block content %}{% endblock %}
 
+    <script>
+        function scrollToMemorable() {
+            const memorableSection = document.getElementById('memorable-things');
+            if (memorableSection) {
+                memorableSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToSquad() {
+            const squadSection = document.querySelector('.squad-container');
+            if (squadSection) {
+                squadSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function scrollToTrophy() {
+            const trophySection = document.querySelector('.trophy-container');
+            if (trophySection) {
+                trophySection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
 </html>

@@ -3,6 +3,66 @@
 {% block title %}Register - Liverpool FC{% endblock %}
 
 {% block content %}
+<style>
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 30px; /* เพิ่ม padding เพื่อสร้างระยะห่าง */
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    
+    h2 {
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    .form-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .btn-danger {
+        width: 100%;
+        padding: 10px;
+        background: #c8102e;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btn-danger:hover {
+        background: #a00d26;
+    }
+    .alert {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+    p {
+        margin-top: 10px;
+    }
+    a {
+        color: #c8102e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    
+</style>
+
 <div class="container">
     <h2>Register</h2>
 
